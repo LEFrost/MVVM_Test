@@ -9,8 +9,9 @@ using System.Windows.Input;
 
 namespace MVVM_Test.ViewModel
 {
-   public class ViewModelBasic:INotifiProperChanged
+   public class ViewModelBasic : INotifyPropertyChanged
     {
+
         //public ICommand TestCommand { get; set; }
         //public ICommand ManipulationCommand { get; set; }
         //public ICommand GetImageCommand { get; set; }

@@ -8,23 +8,25 @@
     xmlns:model="using:MVVM_Test.MVVM"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-   
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-       
+
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
-            <RowDefinition />
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="29*" />
+            <RowDefinition Height="51*"/>
         </Grid.RowDefinitions>
-
+        <TextBlock Grid.Row="1" Text="{x:Bind viewmodel.Time,Mode=OneWay}"/>
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition Width="60"/>
             </Grid.ColumnDefinitions>
-                <TextBox Name="input" Text="{x:Bind viewmodel.Input,Mode=TwoWay}" Grid.Column="0" />
-                <Button Grid.Column="1" Content="{x:Bind viewmodel.Text}" Click="{x:Bind viewmodel.add_Click}"/>
+            <TextBox Name="input" Text="{x:Bind viewmodel.Input,Mode=TwoWay}" Grid.Column="0" />
+            <Button Grid.Column="1" Content="{x:Bind viewmodel.Text}" Click="{x:Bind viewmodel.add_Click}"/>
         </Grid>
-        <ListView Grid.Row="1" ItemsSource="{x:Bind viewmodel.myList,Mode=OneWay}">
+        <ListView Grid.Row="2" ItemsSource="{x:Bind viewmodel.myList,Mode=OneWay}" Grid.RowSpan="2">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="model:Student">
                     <TextBlock Text="{x:Bind Name ,Mode=OneWay}"/>

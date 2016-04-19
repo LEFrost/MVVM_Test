@@ -103,7 +103,6 @@
     </Compile>
     <Compile Include="Model\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModel\INotifiProperChanged.cs" />
     <Compile Include="ViewModel\MainVeiwModel.cs" />
     <Compile Include="ViewModel\ViewModelBasic.cs" />
   </ItemGroup>
